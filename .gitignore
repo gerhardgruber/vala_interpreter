@@ -16,3 +16,4 @@
 *.exe
 *.out
 *.app
+src/vala_interpreter
