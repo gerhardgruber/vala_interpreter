@@ -63,13 +63,13 @@ identifier_character = alphabetic_character | digit | "_" ;
 
 identifier = alphabetic_character { identifier_character } ;
 
-expression = arithmetic_expression | boolean_expression | literal | assignment | declaration | method_call ;
+expression = arithmetic_expression | boolean_expression | literal | assignment | declaration | method_call | "(" expression ")";
 
 arithmetic_expression = addition | subtraction | multiplication | division ;
-addition = ( number | identifier ) "+" ( number | identifier ) ;
-subtraction = ( number | identifier ) "-" ( number | identifier ) ;
-multiplication = ( number | identifier ) "*" ( number | identifier ) ;
-division = ( number | identifier ) "/" ( number | identifier ) ;
+addition = expression "+" expression ;
+subtraction = expression "-" expression ;
+multiplication = expression "*" expression ;
+division = expression "/" expression ;
 
 boolean_expression =  boolean_value |
                       compare_expression |
@@ -78,11 +78,11 @@ boolean_expression =  boolean_value |
                       "(" boolean_expression ")" ;
 logical_operator = "&&" | "||" ;
 compare_operator = "<" | "<=" | "==" | ">=" | ">" ;
-compare_expression = literal compare_operator literal ;
+compare_expression = expression compare_operator expression ;
 
 assignment = identifier "=" expression ;
 
-declaration = type identifier | type assignment ;
+declaration = type identifier { "," identifier } | type assignment { "," assignment } ;
 
 method_call = identifier "(" [ call_parameter_list ] ")"
 call_parameter_list = expression { "," call_parameter_list }
