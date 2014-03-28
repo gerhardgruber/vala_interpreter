@@ -11,4 +11,10 @@
 #define VINTER_VERSION_SHORT "version 1.0"
 #define VINTER_VERSION_LONG "The amazing vala interpreter, version 1.0"
 
+/* Maximum length of error messages */
+#define MAX_ERRMSG_LENGTH 2048
+
+/* This string can be used to temporarily store error messages */
+char errmsg[ MAX_ERRMSG_LENGTH ];
+
 #endif

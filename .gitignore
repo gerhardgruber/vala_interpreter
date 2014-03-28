@@ -12,8 +12,12 @@
 *.so.*
 *.dylib
 
+# flex output
+*.yy.*
+
 # Executables
 *.exe
 *.out
 *.app
 src/vala_interpreter
+src/lexer_test
