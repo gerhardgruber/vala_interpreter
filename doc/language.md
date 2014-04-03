@@ -16,7 +16,7 @@ hex_digit = digit | "a" | "b" | "c" | "d" | "e" | "f" | "A" | "B" | "C" | "D" | 
 
 decimal_number = [ "-" ] , digit_without_zero { digit } | "0" ;
 
-hex_number = "0x" hex_digit { hex_digit } ;
+hex_number = [ "-" ] "0x" hex_digit { hex_digit } ;
 
 number = decimal_number | hex_number ;
 ```
