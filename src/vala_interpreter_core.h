@@ -29,6 +29,8 @@ char errmsg[ MAX_ERRMSG_LENGTH ];
 #define STRING_TOKEN_NULL_VALUE         "null"
 #define STRING_TOKEN_PAREN_OPEN         "("
 #define STRING_TOKEN_PAREN_CLOSE        ")"
+#define STRING_TOKEN_BRACE_OPEN         "{"
+#define STRING_TOKEN_BRACE_CLOSE        "}"
 #define STRING_TOKEN_OP_PLUS            "+"
 #define STRING_TOKEN_OP_MINUS           "-"
 #define STRING_TOKEN_OP_MULTIPLY        "*"

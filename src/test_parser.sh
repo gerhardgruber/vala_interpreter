@@ -4,11 +4,11 @@
 
 export MY_RC=0
 
-echo "Testing the lexer..."
-pushd ../tests/lexer
+echo "Testing the parser..."
+pushd ../tests/parser
 for test_case in ./*; do
   echo -n "Running testcase $test_case... "
-  ../../src/lexer_test $test_case/input 1>$test_case/test_output 2>tmp_err
+  ../../src/parser_test $test_case/input 1>$test_case/test_output 2>tmp_err
   export RC=$?
 
   export EXPECTED_RC="`cat $test_case/return_code`"
@@ -16,6 +16,7 @@ for test_case in ./*; do
     echo "[0;31m${bold}NOT OK${normal}[00m"
     echo "Wrong return code for testcase $test_case! Expected $EXPECTED_RC but was $RC!"
     cat tmp_err
+      cat $test_case/test_output
     export MY_RC=1
   else
     diff $test_case/output $test_case/test_output

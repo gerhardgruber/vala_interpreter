@@ -11,7 +11,7 @@
 
 #define PROGRAM "lexer_test - A testprogram for the vala_interpreter lexer"
 
-/* This variable will be returned by the check_file method an may be manipulated by the lexer_error method. */
+/* This variable will be returned by the check_file method and may be manipulated by the lexer_error method. */
 int lexer_rc = 0;
 
 /* The filename of the file which is currently checked. Will be set by the check_file method. */
@@ -63,6 +63,10 @@ const char* token_to_string( int token )
       return STRING_TOKEN_PAREN_OPEN;
     case PAREN_CLOSE:
       return STRING_TOKEN_PAREN_CLOSE;
+    case BRACE_OPEN:
+      return STRING_TOKEN_BRACE_OPEN;
+    case BRACE_CLOSE:
+      return STRING_TOKEN_BRACE_CLOSE;
     case OP_PLUS:
       return STRING_TOKEN_OP_PLUS;
     case OP_MINUS:

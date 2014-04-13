@@ -36,6 +36,9 @@ null                            return NULL_VALUE;
 "("                             return PAREN_OPEN;
 ")"                             return PAREN_CLOSE;
 
+"{"                             return BRACE_OPEN;
+"}"                             return BRACE_CLOSE;
+
 "+"                             return OP_PLUS;
 "-"                             return OP_MINUS;
 "*"                             return OP_MULTIPLY;
