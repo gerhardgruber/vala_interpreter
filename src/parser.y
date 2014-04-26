@@ -77,7 +77,7 @@ Statement:              Expression SEMICOLON ;
                         | IfStatement
                         | WhileStatement ;
 
-IfCondition:            PAREN_OPEN BooleanExpression PAREN_CLOSE ;
+IfCondition:            PAREN_OPEN Expression PAREN_CLOSE ;
 
 IfStatement:            IF IfCondition BlockOrStatement ElseIfStatements ;
 
@@ -89,7 +89,7 @@ ElseIfStatement:        ELSE IF IfCondition BlockOrStatement ;
 ElseStatement:          /* empty */
                         | ELSE BlockOrStatement ;
 
-WhileStatement:         WHILE PAREN_OPEN BooleanExpression PAREN_CLOSE BlockOrStatement ;
+WhileStatement:         WHILE PAREN_OPEN Expression PAREN_CLOSE BlockOrStatement ;
 
 BlockOrStatement:       Block
                         | Statement ;
