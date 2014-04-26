@@ -25,3 +25,4 @@ parser.c
 *.app
 src/vala_interpreter
 src/lexer_test
+src/parser_test

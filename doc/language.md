@@ -52,18 +52,18 @@ character_types = "char" | "uchar" | "unichar" ;
 
 string_types = "string" ;
 
-type = integer_types | character_types | string_types | "void" ;
+type = integer_types | character_types | string_types | "void" | "bool" ;
 ```
 
 # Expressions
 ```ebnf
-literal = "null" | number | boolean_value | string | identifier ;
+literal = "null" | number | boolean_value | string ;
 
 identifier_character = alphabetic_character | digit | "_" ;
 
 identifier = alphabetic_character { identifier_character } ;
 
-expression = arithmetic_expression | boolean_expression | literal | assignment | declaration | method_call | "(" expression ")";
+expression = arithmetic_expression | boolean_expression | literal | idetifier | assignment | declaration | method_call | "(" expression ")";
 
 arithmetic_expression = addition | subtraction | multiplication | division ;
 addition = expression "+" expression ;
@@ -92,8 +92,7 @@ call_parameter_list = expression { "," call_parameter_list }
 ```ebnf
 statement = expression ";" |
             if_statement |
-            while_statement |
-            declaration ;
+            while_statement ;
 
 block_or_statement = block | statement ;
 
@@ -101,7 +100,7 @@ while_statement = "while" "(" boolean_expression ")" block_or_statement ;
 
 if_statement = "if" "(" boolean_expression ")" block_or_statement { elseif_statement } { else_statement } ;
 elseif_statement = "else if" "(" boolean_expression ")" block_or_statement ;
-elseif_statement = "else" block_or_statement ;
+else_statement = "else" block_or_statement ;
 
 block = "{" { statement } "}" ;
 

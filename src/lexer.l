@@ -13,7 +13,7 @@ identifier          [a-z][a-zA-Z_0-9]*
 hex_digit           [0-9a-fA-F]
 digits              [0-9]*
 digit_without_zero  [1-9]
-type                (uint8|int8|uint16|int16|uint32|int32|uint64|int64|uint|int|ulong|long|uchar|char|unichar|string|void)
+type                (bool|uint8|int8|uint16|int16|uint32|int32|uint64|int64|uint|int|ulong|long|uchar|char|unichar|string|void)
 
 /* States */
 %x IN_COMMENT
@@ -39,6 +39,8 @@ null                            return NULL_VALUE;
 "{"                             return BRACE_OPEN;
 "}"                             return BRACE_CLOSE;
 
+"="                             return EQUALS;
+
 "+"                             return OP_PLUS;
 "-"                             return OP_MINUS;
 "*"                             return OP_MULTIPLY;
@@ -47,6 +49,13 @@ null                            return NULL_VALUE;
 "!"                             return OP_NOT;
 "&&"                            return OP_AND;
 "||"                            return OP_OR;
+
+"=="                            return OP_EQ;
+"!="                            return OP_NE;
+">"                             return OP_GT;
+">="                            return OP_GE;
+"<"                             return OP_LT;
+"<="                            return OP_LE;
 
 ","                             return COMMA;
 ;                               return SEMICOLON;

@@ -42,6 +42,13 @@ char errmsg[ MAX_ERRMSG_LENGTH ];
 #define STRING_TOKEN_IF                 "if"
 #define STRING_TOKEN_ELSE               "else"
 #define STRING_TOKEN_WHILE              "while"
+#define STRING_TOKEN_OP_EQ              "=="
+#define STRING_TOKEN_OP_NE              "!="
+#define STRING_TOKEN_OP_GT              ">"
+#define STRING_TOKEN_OP_GE              ">="
+#define STRING_TOKEN_OP_LT              "<"
+#define STRING_TOKEN_OP_LE              "<="
+#define STRING_TOKEN_EQUALS             "="
 #define STRING_TOKEN_UNKNOWN            "unknown"
 
 

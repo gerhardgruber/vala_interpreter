@@ -1,0 +1,10 @@
+true;
+false;
+
+!true;
+
+a && b;
+a && ( !b || c );
+a == true;
+
+!( a == ( 1 + 2 ) );

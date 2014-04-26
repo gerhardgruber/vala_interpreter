@@ -9,7 +9,7 @@
 #include "lexer.yy.h"
 #include "parser.h"
 
-extern void yyparse( );
+extern int yyparse( );
 
 #define PROGRAM "parser_test - A testprogram for the vala_interpreter parser"
 

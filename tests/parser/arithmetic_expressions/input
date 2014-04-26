@@ -1,0 +1,15 @@
+/* Addition */
+a + b;
+1 + 2;
+
+/* Subtraction */
+a - b;
+1 - 2;
+
+/* Multiplication */
+a * b;
+1 * 2;
+
+/* Division */
+a / b;
+1 / 2;

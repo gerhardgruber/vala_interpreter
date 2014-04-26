@@ -89,6 +89,20 @@ const char* token_to_string( int token )
       return STRING_TOKEN_ELSE;
     case WHILE:
       return STRING_TOKEN_WHILE;
+    case OP_EQ:
+      return STRING_TOKEN_OP_EQ;
+    case OP_NE:
+      return STRING_TOKEN_OP_NE;
+    case OP_GT:
+      return STRING_TOKEN_OP_GT;
+    case OP_GE:
+      return STRING_TOKEN_OP_GE;
+    case OP_LT:
+      return STRING_TOKEN_OP_LT;
+    case OP_LE:
+      return STRING_TOKEN_OP_LE;
+    case EQUALS:
+      return STRING_TOKEN_EQUALS;
     default:
       return STRING_TOKEN_UNKNOWN;
   }
